@@ -1,0 +1,87 @@
+:root {
+  --start: #01579b;
+  --end: #00acc1;
+  --p-card-background-elevation1: #e1f5fe;
+  --p-card-background-elevation2: #b2ebf2;
+  --p-card-divider: var(--start);
+
+  --on-bg: white;
+  --on-card: black;
+}
+
+a {
+  color: var(--end);
+}
+
+code {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  border: 1px solid #aaaa;
+  color: var(--start);
+  background: #0001;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(85deg, var(--start), var(--end));
+  color: var(--on-bg);
+}
+
+.info {
+  border-left: 4px solid #64b5f6;
+  padding: 0.6rem 1rem;
+}
+
+p-card,
+spacex-launch {
+  color: var(--on-card);
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+:defined {
+  opacity: 1;
+}
+
+p-card[collapsed]::part(heading-divider),
+#how-it-works::part(actions) {
+  display: none;
+}
+
+apollo-client {
+  display: contents;
+}
+
+main {
+  overflow-x: hidden;
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+header > * {
+  height: 64px;
+  font-size: 64px;
+}
+
+h1 {
+  font-size: 5vw;
+  text-transform: capitalize;
+}
+
+p {
+  break-inside: avoid;
+}
+
+#root {
+  display: grid;
+  gap: 16px;
+}

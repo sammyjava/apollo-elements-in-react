@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="icon" href="../src/assets/apollo-elements.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <title>Apollo Elements in React</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="react.svg" alt="React" />
+      <span aria-label="loves">💙</span>
+      <img src="apollo-elements.png" alt="Apollo Elements" />
+      <h1>Apollo Elements in React</h1>
+    </header>
+
+    <main>
+      <div id="root"></div>
+      <p-card id="how-it-works" collapsible>
+        <h2 slot="heading">How it Works</h2>
+        <p>
+          This demo uses Apollo Elements to query the
+          <a href="https://spacex.land" target="_blank" rel="noreferrer">
+            unofficial SpaceX GraphQL API
+          </a>
+          . The <code>&lt;spacex-launches&gt;</code> and <code>&lt;spacex-launch&gt;</code> custom
+          elements are written with LitElement, but it could be any web component library, or none.
+          Check out the
+          <a href="https://apolloelements.dev" target="_blank" rel="noreferrer">
+            docs
+          </a>
+          for examples.
+        </p>
+        <p>
+          The <code>&lt;spacex-launches&gt;</code> element queries for a list of launches. When you
+          select a launch from the dropdown, it fires a DOM event, which React listens out for to
+          update it's own state. React then binds the selected launch's ID to the
+          <code>&lt;spacex-launch&gt;</code> component with standard HTML and the DOM.
+          <code>&lt;spacex-launch&gt;</code> then independently fetches details about the mission.
+        </p>
+
+        <p>
+          👉 <code>&lt;spacex-launches&gt;</code> is installed over npm from the
+          <code>@apollo-elements-demos/spacex-launches</code> package. View the source and a live
+          demo on
+          <a
+            href="https://webcomponents.dev/edit/n67sjuzH56J05LOLnxx0"
+            target="_blank"
+            rel="noreferrer"
+          >
+            WebComponents.dev
+          </a>
+          . This same package is used for all the framework demos.
+          <em>Write once, run in any framework</em>!
+        </p>
+
+        <p>
+          Learn more about Apollo Elements at
+          <a href="https://apolloelements.dev" target="_blank" rel="noreferrer">
+            apolloelements.dev
+          </a>
+        </p>
+      </p-card>
+    </main>
+  </body>
+</html>
